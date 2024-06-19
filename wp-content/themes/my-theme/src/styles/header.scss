@@ -1,4 +1,74 @@
+@import "variables.scss";
+
 .header {
-  display: flex;
-  color: blue;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 70px;
+    background: $secondary_bg;
+
+    & .custom-logo {
+      width: 180px;
+      height: 40px;
+    }
+
+    & .menu__list {
+      display: flex;
+      gap: 53px;
+      font-weight: 400;
+      color: $grey_text;
+
+      & .menu-item:hover,
+      & .menu-item:focus,
+      & .menu-item.current_page_item {
+        font-weight: 500;
+        color: $dark_color;
+      }
+
+      & .menu-item.menu-item-has-children {
+        position: relative;
+      }
+
+      & .sub-menu {
+        display: none;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        flex-direction: column;
+        gap: 20px;
+        min-width: 134px;
+        min-height: 138px;
+        padding: 34px 20px 20px;
+        background-color: transparent;
+        color: $grey_text;
+        line-height: 1;
+
+        & li {
+          z-index: 1;
+          &:hover,
+          &:focus {
+            color: $dark_color;
+          }
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: -20px;
+          left: -20px;
+          right: -20px;
+          background: center / cover url("../../assets/images/Union.svg");
+          pointer-events: none;
+        }
+      }
+      & .menu-item.menu-item-has-children:hover,
+      & .menu-item.menu-item-has-children:focus {
+        .sub-menu {
+          display: flex;
+        }
+      }
+    }
+  }
 }

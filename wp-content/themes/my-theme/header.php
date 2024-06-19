@@ -12,7 +12,7 @@
 <body>
   <div class="wrapper">
     <header class="header">
-      <div class="">
+      <div class="header__container">
         <?php 
                         if ( has_custom_logo() ) {
                             echo get_custom_logo();
