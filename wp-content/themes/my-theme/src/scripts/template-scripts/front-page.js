@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // slider swiper
   const valuesSwiper = new Swiper(".testimonial__slider", {
     slidesPerView: 1,
     spaceBetween: 10,

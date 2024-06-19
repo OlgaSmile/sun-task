@@ -4,6 +4,8 @@ $form_title = get_field('form_title');
 $form_email = get_field('form_email');
 $form_address = get_field('form_address');
 
+$form = get_field('contact_form');
+                
 ?>
 
 <section class="section form__section">
@@ -34,7 +36,13 @@ $form_address = get_field('form_address');
 
         </div>
 
-        <div class="form__object">
+        <div class="">
+
+          <?php if($form) : ?>
+          <div class="form__object">
+            <?php echo $form?>
+          </div>
+          <?php endif; ?>
 
         </div>
 

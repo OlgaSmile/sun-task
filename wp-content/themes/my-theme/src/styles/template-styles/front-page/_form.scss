@@ -3,12 +3,14 @@
     background-color: $main_bg;
   }
   &__block {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   &__content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-height: 380px;
   }
   &__contacts {
     font-size: 20px;
@@ -17,6 +19,62 @@
       margin-bottom: 14px;
       color: $accent_color;
       text-decoration: underline;
+    }
+  }
+
+  // contact form settings
+  &__object {
+    & .form__input {
+      margin-bottom: 16px;
+    }
+
+    & .form__input input,
+    & .form__input textarea {
+      width: 100%;
+      padding: 18px 24px;
+      border: 1px solid $grey_text;
+      border-radius: $small-border-radius;
+      background: $white;
+      &:focus,
+      &:active {
+        border-color: $accent_dark;
+        outline: 4px solid rgba(105, 174, 150, 0.3);
+      }
+      &:disabled {
+        color: $grey_disabled_text;
+        background-color: $grey_disabled;
+        border-color: $grey_disabled_text;
+      }
+    }
+
+    & .form__input.form__message {
+      margin-bottom: 30px;
+      & textarea {
+        height: 132px;
+      }
+    }
+
+    & .form__button p {
+      display: flex;
+      gap: 20px;
+      & input {
+        padding-left: 91px;
+        background-image: url("../../../assets/images/Envelope.svg");
+        background-repeat: no-repeat;
+        background-position: 61px 18px;
+      }
+    }
+
+    & .wpcf7 form.failed .wpcf7-response-output,
+    & .wpcf7 form .wpcf7-response-output {
+      border-color: transparent;
+      margin: 0;
+      padding: 0;
+      color: #dc3232;
+    }
+
+    & .wpcf7 form.sent .wpcf7-response-output {
+      color: $dark_color;
     }
   }
 }
