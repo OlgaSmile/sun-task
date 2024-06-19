@@ -10,14 +10,19 @@ function my_theme_styles() {
 	wp_enqueue_style( 'main', get_stylesheet_uri() );
   wp_enqueue_style( 'my_theme-style', get_template_directory_uri() . '/assets/styles/main.css', array('main') );
 
-  wp_enqueue_script( 'my_theme-scripts', get_template_directory_uri() . '/assets/scripts/main.js', array(), false, true ); 
+  wp_enqueue_script( 'my_theme-scripts', get_template_directory_uri() . '/assets/scripts/main.js', array(), false, true );
 
+  if (is_front_page(  )) {
+    wp_enqueue_style('hero-style', get_template_directory_uri() . '/assets/styles/template-parts-styles/hero.css', array('main'));
+  }
 }
 
 /** add fonts */
 function add_google_fonts() {
-  wp_enqueue_style( 'google_web_fonts', 'https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:ital,wght@0,400;1,300;1,600&display=swap', [], null );
+  wp_enqueue_style( 'google_web_fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300;1,600&family=Italiana&display=swap', [], null );
 }
+
+add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
 
 /** Register menus */
 function my_theme_menus() {

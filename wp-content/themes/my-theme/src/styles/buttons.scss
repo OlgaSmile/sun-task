@@ -1,0 +1,29 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 61px;
+  width: fit-content;
+  min-height: 60px;
+  border: 2px solid transparent;
+  border-radius: $big-border-radius;
+  box-shadow: 0 12px 24px 0 rgba(44, 39, 56, 0.08);
+  background: $accent_color;
+
+  font-weight: 500;
+  font-size: 16px;
+  color: $white;
+  line-height: 1;
+
+  &:hover {
+    background: $accent_dark;
+  }
+  &:focus {
+    border-color: $accent_dark;
+    outline: 4px solid rgba(105, 174, 150, 0.4);
+  }
+  &:disabled {
+    background: $grey_disabled;
+    color: $grey_disabled_text;
+  }
+}

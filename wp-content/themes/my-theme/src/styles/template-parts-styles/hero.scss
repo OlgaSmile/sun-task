@@ -1,0 +1,40 @@
+@import "../variables.scss";
+
+.hero {
+  &__section {
+    position: relative;
+    height: 971px;
+    display: flex;
+    align-items: center;
+    background: $secondary_bg;
+  }
+
+  &__container {
+    margin-left: 200px;
+  }
+
+  &__content {
+    max-width: 542px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-family: $secondary_font;
+    font-weight: 400;
+    font-size: 90px;
+    letter-spacing: 0.04em;
+    color: $dark_color;
+  }
+
+  &__description {
+    margin-bottom: 40px;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+  }
+
+  &__image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
