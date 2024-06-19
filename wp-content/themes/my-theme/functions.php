@@ -14,6 +14,7 @@ function my_theme_styles() {
 
   if (is_front_page(  )) {
     wp_enqueue_style('hero-style', get_template_directory_uri() . '/assets/styles/template-parts-styles/hero.css', array('main'));
+    wp_enqueue_style('description-style', get_template_directory_uri() . '/assets/styles/template-parts-styles/description-section.css', array('main'));
   }
 }
 

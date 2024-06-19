@@ -13,7 +13,7 @@ $image = get_field('hero_image');
 
     <div class="hero__content">
 
-      <h1 class="hero__title"><?php if($hero_title){
+      <h1 class="title hero__title"><?php if($hero_title){
         echo $hero_title;
       } ?></h1>
 
