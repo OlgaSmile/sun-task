@@ -1,0 +1,43 @@
+.testimonial {
+  &__slide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 30px;
+    border-radius: $medium-border-radius;
+    background: $main_bg;
+  }
+
+  &__content {
+    margin-left: 50px;
+    max-width: 500px;
+  }
+
+  &__image {
+    border-radius: 10px;
+    aspect-ratio: 55/34;
+    overflow: hidden;
+    & img {
+      object-fit: cover;
+      max-height: 100%;
+      max-width: 100%;
+      height: initial;
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  &__author {
+    margin-bottom: 5px;
+    font-weight: 600;
+    &--role {
+      font-weight: 300;
+      font-size: 14px;
+    }
+  }
+}

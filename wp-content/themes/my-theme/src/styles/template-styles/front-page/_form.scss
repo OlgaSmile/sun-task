@@ -1,0 +1,22 @@
+.form {
+  &__section {
+    background-color: $main_bg;
+  }
+  &__block {
+    display: flex;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__contacts {
+    font-size: 20px;
+    font-weight: 400;
+    &--mail {
+      margin-bottom: 14px;
+      color: $accent_color;
+      text-decoration: underline;
+    }
+  }
+}
