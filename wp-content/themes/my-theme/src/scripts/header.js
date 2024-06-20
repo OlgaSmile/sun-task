@@ -2,25 +2,29 @@ document.addEventListener("DOMContentLoaded", function () {
   // open mobile menu
   const openMenuBtn = document.getElementById("js-open-menu");
   const closeMenuBtn = document.getElementById("js-close-menu");
-  const mobileMenuEl = document.getElementById("js-mobile-menu");
+  const mobileBackdropEl = document.getElementById("js-mobile-backdrop");
   const panelEL = document.querySelector(".sub-menu");
 
   openMenuBtn.addEventListener("click", openMenu);
-  closeMenuBtn.addEventListener("click", closeMenu);
-  mobileMenuEl.addEventListener("click", closeMenubyBgdClick);
 
   function openMenu() {
-    mobileMenuEl.classList.remove("hidden");
-    openMenuBtn.classList.add("hidden");
+    mobileBackdropEl.classList.remove("hidden");
     closeMenuBtn.classList.remove("hidden");
+    openMenuBtn.classList.add("hidden");
     document.body.classList.add("modal-open");
+
+    closeMenuBtn.addEventListener("click", closeMenu);
+    mobileBackdropEl.addEventListener("click", closeMenubyBgdClick);
   }
 
   function closeMenu() {
-    mobileMenuEl.classList.add("hidden");
-    openMenuBtn.classList.remove("hidden");
+    mobileBackdropEl.classList.add("hidden");
     closeMenuBtn.classList.add("hidden");
+    openMenuBtn.classList.remove("hidden");
     document.body.classList.remove("modal-open");
+
+    closeMenuBtn.removeEventListener("click", closeMenu);
+    mobileBackdropEl.removeEventListener("click", closeMenubyBgdClick);
     panelEL.style.maxHeight = null;
   }
 

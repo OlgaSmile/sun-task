@@ -32,8 +32,8 @@
           </svg>
         </button>
 
-        <div class="menu__block hidden" id="js-mobile-menu">
-          <nav class="">
+        <div class="menu__block hidden" id="js-mobile-backdrop">
+          <nav>
             <?php wp_nav_menu( [
                                 'theme_location'       => 'header',                          
                                 'container'            => false,                           
