@@ -20,13 +20,6 @@ body {
   overflow-x: hidden;
 }
 
-html.modal__opened {
-  position: fixed;
-  right: 0;
-  left: 0;
-  overflow: hidden;
-}
-
 body {
   margin: 0;
   background-color: $white;
@@ -220,6 +213,10 @@ select {
   outline: none;
   border: none;
   background: transparent;
+}
+
+svg {
+  fill: currentColor;
 }
 
 .wrapper {

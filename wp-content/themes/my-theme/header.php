@@ -13,13 +13,28 @@
   <div class="wrapper">
     <header class="header">
       <div class="header__container">
+
         <?php 
             if ( has_custom_logo() ) {
                 echo get_custom_logo();
             }
         ?>
-        <nav class="">
-          <?php wp_nav_menu( [
+
+        <button class="menu__btn--open" id="js-open-menu" type="button" aria-label="Open menu">
+          <svg class="menu__icon">
+            <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#menu-burger"></use>
+          </svg>
+        </button>
+
+        <button class="menu__btn--close hidden" id="js-close-menu" type="button" aria-label="Open menu">
+          <svg class="menu__icon">
+            <use href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#close"></use>
+          </svg>
+        </button>
+
+        <div class="menu__block hidden" id="js-mobile-menu">
+          <nav class="">
+            <?php wp_nav_menu( [
                                 'theme_location'       => 'header',                          
                                 'container'            => false,                           
                                 'menu_class'           => 'menu__list',
@@ -28,6 +43,8 @@
                                 'items_wrap'           => '<ul id="%1$s" class="header_list %2$s">%3$s</ul>',  
                                 ] ); 
                             ?>
-        </nav>
+          </nav>
+        </div>
+
       </div>
     </header>

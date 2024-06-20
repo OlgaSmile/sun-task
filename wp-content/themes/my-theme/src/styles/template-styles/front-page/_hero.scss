@@ -8,6 +8,10 @@
     @media screen and (max-width: $desktop) {
       height: 800px;
     }
+    @media screen and (max-width: $tablet) {
+      height: 750px;
+      align-items: flex-end;
+    }
   }
 
   &__container {
@@ -15,24 +19,38 @@
     @media screen and (max-width: $desktop) {
       margin-left: 70px;
     }
+    @media screen and (max-width: $desktop) {
+      margin-left: 30px;
+    }
   }
 
   &__content {
+    position: relative;
+    z-index: 2;
     max-width: 542px;
     @media screen and (max-width: $desktop) {
       max-width: 460px;
+    }
+    @media screen and (max-width: $tablet) {
+      margin-bottom: 40px;
     }
   }
 
   &__title {
     margin-bottom: 10px;
     font-size: 90px;
+    @media screen and (max-width: $tablet) {
+      font-size: 64px;
+    }
   }
 
   &__description {
     margin-bottom: 40px;
     font-size: 20px;
     letter-spacing: 0.02em;
+    @media screen and (max-width: $tablet) {
+      margin-bottom: 20px;
+    }
   }
 
   &__image {
@@ -42,6 +60,13 @@
     max-width: 739px;
     @media screen and (max-width: $desktop) {
       max-width: 600px;
+    }
+
+    @media screen and (max-width: $tablet) {
+      z-index: 1;
+      & img {
+        opacity: 0.15;
+      }
     }
   }
 }

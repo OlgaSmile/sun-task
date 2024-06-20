@@ -27,6 +27,7 @@ function add_google_fonts() {
 
 add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
 
+
 /** Register menus */
 function my_theme_menus() {
   $locations = array(
@@ -40,18 +41,18 @@ add_action( 'init', 'my_theme_menus');
 
 
 /** Widgets registration */
-add_action( 'widgets_init', 'register_widgets' );
-
 function register_widgets(){
-
-	register_sidebar( array(
-		'name'          => 'Footer menu',
+  
+  register_sidebar( array(
+    'name'          => 'Footer menu',
 		'id'            => "footer-menu",
 		'class'         => '',
 		'before_widget' => '<div id="%1$s" class="widget footer__widget">',
 		'after_widget'  => "</div>\n",
-	) );
-}
+    ) );
+  }
+  
+  add_action( 'widgets_init', 'register_widgets' );
 
 
 /** Add custom logo */
