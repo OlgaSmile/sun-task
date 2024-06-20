@@ -8,11 +8,8 @@
 
 .section {
   padding: 120px 0;
-  @media screen and (max-width: $desktop) {
-  }
   @media screen and (max-width: $tablet) {
-  }
-  @media screen and (max-width: $mobile) {
+    padding: 60px 0;
   }
 }
 
@@ -26,18 +23,12 @@
   @media screen and (max-width: $tablet) {
     width: 100%;
   }
-  @media screen and (max-width: $mobile) {
-  }
 }
 
 .inner-container {
   max-width: 1170px;
   margin: 0 auto;
-  @media screen and (max-width: $desktop) {
-  }
   @media screen and (max-width: $tablet) {
     width: 100%;
-  }
-  @media screen and (max-width: $mobile) {
   }
 }

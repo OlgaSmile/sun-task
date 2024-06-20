@@ -1,6 +1,9 @@
 .footer {
   &__section {
     padding: 100px 0;
+    @media screen and (max-width: $tablet) {
+      padding: 40px 0;
+    }
   }
   &__container {
     display: flex;
@@ -8,13 +11,22 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
+    @media screen and (max-width: $tablet) {
+      gap: 20px;
+    }
     & .custom-logo {
       width: 290px;
+      @media screen and (max-width: $tablet) {
+        width: 180px;
+      }
     }
   }
   &__widget .menu {
     display: flex;
     gap: 53px;
+    @media screen and (max-width: $tablet) {
+      gap: 30px;
+    }
   }
   &__copyright {
     font-size: 14px;

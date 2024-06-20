@@ -6,13 +6,28 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    @media screen and (max-width: $tablet) {
+      display: block;
+      padding: 0 14px;
+    }
   }
   &__content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 380px;
+    @media screen and (max-width: $tablet) {
+      margin-bottom: 20px;
+      min-height: initial;
+    }
   }
+
+  &__title {
+    @media screen and (max-width: $tablet) {
+      margin-bottom: 32px;
+    }
+  }
+
   &__contacts {
     font-size: 20px;
     font-weight: 400;

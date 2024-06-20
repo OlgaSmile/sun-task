@@ -7,11 +7,17 @@
 
 .block_title {
   font-size: 60px;
+  @media screen and (max-width: $tablet) {
+    font-size: 40px;
+  }
 }
 
 .section_title {
   font-size: 70px;
   & span {
     color: $accent_color;
+  }
+  @media screen and (max-width: $tablet) {
+    font-size: 50px;
   }
 }

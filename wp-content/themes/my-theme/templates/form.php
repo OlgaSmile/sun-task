@@ -15,7 +15,7 @@ $form = get_field('contact_form');
 
         <div class="form__content">
 
-          <h2 class="title section_title">
+          <h2 class="title section_title form__title">
             <?php if($form_title){
               echo $form_title;
             } ?>

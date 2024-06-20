@@ -1,6 +1,9 @@
 .description {
   &__section {
     padding-top: 100px;
+    @media screen and (max-width: $tablet) {
+      padding-top: 40px;
+    }
   }
 
   &__container {
@@ -15,6 +18,9 @@
 
   &__content {
     padding: 30px 10px 30px 100px;
+    @media screen and (max-width: $tablet) {
+      padding: 40px 14px;
+    }
   }
 
   &__title {
@@ -24,6 +30,9 @@
   &__image {
     height: 490px;
     overflow: hidden;
+    @media screen and (max-width: $tablet) {
+      height: 100%;
+    }
     & img {
       object-fit: contain;
       width: initial;

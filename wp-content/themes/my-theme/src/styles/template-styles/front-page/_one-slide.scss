@@ -6,21 +6,32 @@
     padding: 30px;
     border-radius: $medium-border-radius;
     background: $main_bg;
+    @media screen and (max-width: $tablet) {
+      display: block;
+    }
   }
 
   &__content {
     margin-left: 50px;
     max-width: 500px;
+    @media screen and (max-width: $tablet) {
+      margin-left: 0;
+      max-width: none;
+    }
   }
 
   &__image {
     border-radius: 10px;
     aspect-ratio: 55/34;
     overflow: hidden;
+    @media screen and (max-width: $tablet) {
+      margin-bottom: 20px;
+    }
+
     & img {
       object-fit: cover;
-      max-height: 100%;
-      max-width: 100%;
+      min-height: 100%;
+      min-width: 100%;
       height: initial;
     }
   }
