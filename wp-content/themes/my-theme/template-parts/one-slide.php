@@ -5,14 +5,16 @@ $testimonial_author = get_field('testimonial_author');
 $testimonial_author_role = get_field('testimonial_author_role');
 
 $testimonial_image = get_field('testimonial_image');
+$size = 'medium';
 
 ?>
 
 <div class="swiper-slide testimonial__slide">
 
   <div class="testimonial__image">
-    <img class="" src="<?php echo esc_url($testimonial_image['sizes']['medium_large']); ?>"
-      alt="<?php echo esc_attr($testimonial_image['alt']); ?>">
+    <?php if( $testimonial_image ) {
+        echo wp_get_attachment_image( $testimonial_image, $size );
+    } ?>
   </div>
 
   <div class="testimonial__content">

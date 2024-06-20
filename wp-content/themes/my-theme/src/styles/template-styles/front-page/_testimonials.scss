@@ -50,6 +50,7 @@
         }
       }
       &.swiper-button-disabled {
+        cursor: auto;
         background: $grey_disabled;
         border-color: $grey_disabled;
         & svg {

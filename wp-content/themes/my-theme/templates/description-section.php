@@ -4,7 +4,7 @@ $description_title = get_field('description_title');
 $description_text = get_field('description_text');
 
 $description_image = get_field('description_image');
-
+$size = 'medium';
 ?>
 
 <section class="description__section">
@@ -20,16 +20,17 @@ $description_image = get_field('description_image');
 
         <p class="description__text">
           <?php 
-      if($description_text) {
-        echo $description_text;
-      }?>
+          if($description_text) {
+            echo $description_text;
+          }?>
         </p>
 
       </div>
 
       <div class="description__image">
-        <img class="" src="<?php echo esc_url($description_image['sizes']['medium_large']); ?>"
-          alt="<?php echo esc_attr($description_image['alt']); ?>">
+        <?php if( $description_image ) {
+            echo wp_get_attachment_image( $description_image, $size );
+        } ?>
       </div>
 
     </div>

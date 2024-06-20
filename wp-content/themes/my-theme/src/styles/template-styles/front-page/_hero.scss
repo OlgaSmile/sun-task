@@ -5,14 +5,23 @@
     display: flex;
     align-items: center;
     background: $hero_bg;
+    @media screen and (max-width: $desktop) {
+      height: 800px;
+    }
   }
 
   &__container {
     margin-left: 200px;
+    @media screen and (max-width: $desktop) {
+      margin-left: 70px;
+    }
   }
 
   &__content {
     max-width: 542px;
+    @media screen and (max-width: $desktop) {
+      max-width: 460px;
+    }
   }
 
   &__title {
@@ -31,5 +40,8 @@
     bottom: 0;
     right: 0;
     max-width: 739px;
+    @media screen and (max-width: $desktop) {
+      max-width: 600px;
+    }
   }
 }

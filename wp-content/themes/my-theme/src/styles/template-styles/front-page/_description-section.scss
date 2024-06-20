@@ -9,11 +9,12 @@
     justify-content: space-between;
     align-items: center;
     border-radius: $medium-border-radius;
+    overflow: hidden;
     background-color: $secondary_bg;
   }
 
   &__content {
-    padding: 30px 30px 30px 100px;
+    padding: 30px 10px 30px 100px;
   }
 
   &__title {

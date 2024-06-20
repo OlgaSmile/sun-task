@@ -6,6 +6,7 @@ $hero_button_cta = get_field('hero_button_cta');
 $hero_button_link = get_field('hero_button_link');
 
 $image = get_field('hero_image');
+$size = 'medium-large';
 
 ?>
 <section class="hero__section">
@@ -29,8 +30,9 @@ $image = get_field('hero_image');
     </div>
 
     <div class="hero__image">
-      <img class="" src="<?php echo esc_url($image['sizes']['medium_large']); ?>"
-        alt="<?php echo esc_attr($image['alt']); ?>">
+      <?php if( $image ) {
+          echo wp_get_attachment_image( $image, $size );
+      } ?>
     </div>
   </div>
 </section>
