@@ -21,7 +21,13 @@
   }
 
   &__image {
-    max-height: 490px;
+    height: 490px;
     overflow: hidden;
+    & img {
+      object-fit: contain;
+      width: initial;
+      height: inherit;
+      margin-left: auto;
+    }
   }
 }

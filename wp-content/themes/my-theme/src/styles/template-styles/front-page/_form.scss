@@ -5,17 +5,19 @@
   &__block {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
   &__content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-height: 380px;
+    min-height: 380px;
   }
   &__contacts {
     font-size: 20px;
     font-weight: 400;
     &--mail {
+      display: block;
       margin-bottom: 14px;
       color: $accent_color;
       text-decoration: underline;
@@ -31,6 +33,7 @@
     & .form__input input,
     & .form__input textarea {
       width: 100%;
+      height: 60px;
       padding: 18px 24px;
       border: 1px solid $grey_text;
       border-radius: $small-border-radius;
@@ -49,6 +52,7 @@
 
     & .form__input.form__message {
       margin-bottom: 30px;
+      height: 132px;
       & textarea {
         height: 132px;
       }
@@ -56,6 +60,7 @@
 
     & .form__button p {
       display: flex;
+      align-items: center;
       gap: 20px;
       & input {
         padding-left: 91px;
