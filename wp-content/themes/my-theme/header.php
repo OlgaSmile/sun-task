@@ -14,10 +14,10 @@
     <header class="header">
       <div class="header__container">
         <?php 
-                        if ( has_custom_logo() ) {
-                            echo get_custom_logo();
-                        }
-                    ?>
+            if ( has_custom_logo() ) {
+                echo get_custom_logo();
+            }
+        ?>
         <nav class="">
           <?php wp_nav_menu( [
                                 'theme_location'       => 'header',                          

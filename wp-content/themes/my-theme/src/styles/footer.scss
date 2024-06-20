@@ -1,3 +1,23 @@
 .footer {
-    color: pink;
+  &__section {
+    padding: 100px 0;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    & .custom-logo {
+      width: 290px;
+    }
+  }
+  &__widget .menu {
+    display: flex;
+    gap: 53px;
+  }
+  &__copyright {
+    font-size: 14px;
+    opacity: 0.5;
+  }
 }
