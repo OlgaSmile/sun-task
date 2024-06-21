@@ -82,6 +82,10 @@
         background-image: url("../../../assets/images/Envelope.svg");
         background-repeat: no-repeat;
         background-position: 61px 18px;
+        @media screen and (max-width: $mobile) {
+          padding-left: 62px;
+          background-position: 32px 18px;
+        }
       }
     }
 

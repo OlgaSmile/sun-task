@@ -12,6 +12,12 @@ $size = 'medium-large';
 <section class="hero__section">
   <div class="hero__container">
 
+    <div class="hero__image">
+      <?php if( $image ) {
+          echo wp_get_attachment_image( $image, $size );
+      } ?>
+    </div>
+
     <div class="hero__content">
 
       <h1 class="title hero__title"><?php if($hero_title){
@@ -29,10 +35,5 @@ $size = 'medium-large';
       } ?></a>
     </div>
 
-    <div class="hero__image">
-      <?php if( $image ) {
-          echo wp_get_attachment_image( $image, $size );
-      } ?>
-    </div>
   </div>
 </section>

@@ -178,6 +178,12 @@
         width: 200px;
         padding: 0 30px;
       }
+      @media screen and (max-width: $mobile) {
+        padding: 30px;
+        border-radius: $medium-border-radius;
+        background-color: $hero_bg;
+        box-shadow: 0 12px 24px 0 rgba(44, 39, 56, 0.08);
+      }
     }
   }
 }

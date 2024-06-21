@@ -8,6 +8,10 @@
     @media screen and (max-width: $tablet) {
       margin-bottom: 32px;
     }
+    @media screen and (max-width: $mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
   &__navigation {
     display: flex;

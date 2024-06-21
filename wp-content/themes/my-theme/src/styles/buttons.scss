@@ -17,6 +17,11 @@
 
   transition: $transition-function;
 
+  @media screen and (max-width: $mobile) {
+    width: 100%;
+    padding: 20px 32px;
+  }
+
   &:hover {
     background: $accent_dark;
   }
