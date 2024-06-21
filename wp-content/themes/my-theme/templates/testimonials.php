@@ -41,17 +41,31 @@ $testimonial_title_accent = get_field('testimonial_title_accent');
 
           </div>
         </div>
+
       </div>
 
 
+      <?php 
+        $args = array(
+          'post_type' => 'post',
+          'posts_per_page' => 5,
+        ); 
+        
+        $query = new WP_Query($args);
+
+        if($query -> have_posts(  )) { ?>
 
       <div class="swiper testimonial__slider">
         <div class="swiper-wrapper testimonial__slider--wrapper">
 
-          <?php get_template_part( 'template-parts/one-slide'); ?>
-          <?php get_template_part( 'template-parts/one-slide'); ?>
-          <?php get_template_part( 'template-parts/one-slide'); ?>
-
+          <?php while($query -> have_posts(  )) {
+          
+          $query -> the_post(  );
+          get_template_part( 'template-parts/one-slide');
+           
+          }
+        }
+        wp_reset_postdata(); ?>
         </div>
 
         <div class="swiper-pagination testimonial__slider--pagination"></div>
